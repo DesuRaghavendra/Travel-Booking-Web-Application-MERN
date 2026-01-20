@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import api from '../services/api';
 import { useAuth } from '../context/AuthContext';
+import { useNavigate } from 'react-router-dom';
 import './HotelPage.css';
 
 const HotelsPage = () => {
@@ -14,6 +15,7 @@ const HotelsPage = () => {
     const [loading, setLoading] = useState(false);
     const [message, setMessage] = useState('');
     const [searchClicked, setSearchClicked] = useState(false);
+    const navigate = useNavigate();
 
     const fetchHotels = async () => {
         setLoading(true);
@@ -52,6 +54,7 @@ const HotelsPage = () => {
     const handleBook = async (hotelId, price) => {
         if (!isAuthenticated) {
             alert('Please login to book a hotel.');
+            navigate("/auth");
             return;
         }
 

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import api from '../services/api';
 import { useAuth } from '../context/AuthContext';
+import { useNavigate } from 'react-router-dom';
 import './FlightPage.css';
 
 const FlightsPage = () => {
@@ -12,6 +13,7 @@ const FlightsPage = () => {
     const [loading, setLoading] = useState(false);
     const [message, setMessage] = useState('');
     const [searchClicked, setSearchClicked] = useState(false);
+    const navigate = useNavigate();
 
     const fetchFlights = async () => {
         setLoading(true);
@@ -45,7 +47,8 @@ const FlightsPage = () => {
     const handleBook = async (flightId, price) => {
         if (!isAuthenticated) {
             alert('Please login to book a flight.');
-            return;
+            navigate("/auth");
+            return;   
         }
 
         try {
