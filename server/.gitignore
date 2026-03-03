@@ -1,4 +1,4 @@
 node_modules/
 .env
 public/
-adminHashedpassword.js
+server/adminHashedpassword.js
