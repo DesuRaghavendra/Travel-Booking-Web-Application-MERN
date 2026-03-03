@@ -16,6 +16,7 @@ const Header = () => {
   return (
     <nav className="navbar">
       <div className="container">
+        {/*
         <div 
           className="logo" 
           onClick={() => navigate('/')} 
@@ -25,7 +26,7 @@ const Header = () => {
           <div className="logo-icon">my</div>
           trip
         </div>
-
+*/}
         <div className="nav-items">
           <NavLink to="#" className="nav-item">
             <span role="img" aria-label="house">🏠</span> List Your Property
