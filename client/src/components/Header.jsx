@@ -16,17 +16,17 @@ const Header = () => {
   return (
     <nav className="navbar">
       <div className="container">
-        {/*
+        {
         <div 
           className="logo" 
           onClick={() => navigate('/')} 
           style={{ cursor: 'pointer' }}
         >
-          make
-          <div className="logo-icon">my</div>
-          trip
+          Travel
+          <div className="logo-icon">TA</div>
+          App
         </div>
-*/}
+}
         <div className="nav-items">
           <NavLink to="#" className="nav-item">
             <span role="img" aria-label="house">🏠</span> List Your Property

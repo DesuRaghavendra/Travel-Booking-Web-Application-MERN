@@ -128,7 +128,7 @@ const HotelsPage = () => {
                             <img
                                 src={
                                     hotel.images?.[0]
-                                    ? `http://localhost:5000${hotel.images[0]}`
+                                    ? hotel.images[0]
                                     : 'https://via.placeholder.com/600x400.png?text=Hotel'
                                 }
                             alt={hotel.name}
